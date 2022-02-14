@@ -1,0 +1,33 @@
+@page {
+    size: A4;
+    @bottom-center {
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+        content: "Page " counter(page) " of " counter(pages);
+    }
+}
+
+html, body {
+  margin: 0;
+}
+
+header, footer {
+    text-align: center;
+}
+
+p {
+    line-height: 3em;
+}
+
+.page__header {
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

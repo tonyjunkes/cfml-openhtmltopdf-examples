@@ -1,0 +1,14 @@
+# IDE
+.vscode
+*.iml
+*.ipr
+*.idea
+
+# Other
+WEB-INF
+logs
+lib
+working
+
+# Generated Files
+output

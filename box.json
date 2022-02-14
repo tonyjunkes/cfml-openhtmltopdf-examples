@@ -1,0 +1,26 @@
+{
+    "name":"CFML OpenHTMLToPDF Examples",
+    "description":"Examples using the OpenHTMLToPDF Java library in CFML.",
+    "version":"1.0.0",
+    "author": "@tonyjunkes",
+    "dependencies":{
+        "openhtmltopdf-core-1.0.10":"jar:https://search.maven.org/remotecontent?filepath=com/openhtmltopdf/openhtmltopdf-core/1.0.10/openhtmltopdf-core-1.0.10.jar",
+        "openhtmltopdf-java2d-1.0.10":"jar:https://search.maven.org/remotecontent?filepath=com/openhtmltopdf/openhtmltopdf-java2d/1.0.10/openhtmltopdf-java2d-1.0.10.jar",
+        "openhtmltopdf-pdfbox-1.0.10":"jar:https://search.maven.org/remotecontent?filepath=com/openhtmltopdf/openhtmltopdf-pdfbox/1.0.10/openhtmltopdf-pdfbox-1.0.10.jar",
+        "pdfbox-2.0.25":"jar:https://search.maven.org/remotecontent?filepath=org/apache/pdfbox/pdfbox/2.0.25/pdfbox-2.0.25.jar",
+        "xmpbox-2.0.25":"jar:https://search.maven.org/remotecontent?filepath=org/apache/pdfbox/xmpbox/2.0.25/xmpbox-2.0.25.jar",
+        "fontbox-2.0.25":"jar:https://search.maven.org/remotecontent?filepath=org/apache/pdfbox/fontbox/2.0.25/fontbox-2.0.25.jar",
+        "graphics2d-0.34":"jar:https://search.maven.org/remotecontent?filepath=de/rototor/pdfbox/graphics2d/0.34/graphics2d-0.34.jar",
+        "jsoup-1.14.3":"jar:https://search.maven.org/remotecontent?filepath=org/jsoup/jsoup/1.14.3/jsoup-1.14.3.jar"
+    },
+    "installPaths":{
+        "openhtmltopdf-core-1.0.10":"lib/openhtmltopdf-core-1.0.10/",
+        "openhtmltopdf-java2d-1.0.10":"lib/openhtmltopdf-java2d-1.0.10/",
+        "openhtmltopdf-pdfbox-1.0.10":"lib/openhtmltopdf-pdfbox-1.0.10/",
+        "pdfbox-2.0.25":"lib/pdfbox-2.0.25/",
+        "xmpbox-2.0.25":"lib/xmpbox-2.0.25/",
+        "fontbox-2.0.25":"lib/fontbox-2.0.25/",
+        "graphics2d-0.34":"lib/graphics2d-0.34/",
+        "jsoup-1.14.3":"lib/jsoup-1.14.3/"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name":"cfml-openhtmltopdf-examples",
+    "app":{
+        "cfengine":"lucee@5"
+    },
+    "web":{
+        "http":{
+            "port":8520
+        }
+    }
+}
