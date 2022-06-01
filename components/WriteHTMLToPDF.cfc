@@ -1,12 +1,6 @@
 component displayname="Write HTML to PDF Example"
     output=false
 {
-    // Instantiate reusable Java classes
-    variables.Jsoup = createObject("java", "org.jsoup.Jsoup");
-    variables.W3CDom = createObject("java", "org.jsoup.helper.W3CDom");
-    variables.PdfRendererBuilder = createObject("java", "com.openhtmltopdf.pdfboxout.PdfRendererBuilder");
-    variables.FileOutputStream = createObject("java", "java.io.FileOutputStream");
-
     /**
      * @hint Constructor
      * @loggingEnabled.hint Enable logging for the OpenHTMLToPDF library
@@ -28,8 +22,11 @@ component displayname="Write HTML to PDF Example"
         required string filePath
     ) {
         try{
-            // Clear file if it exists (otherwise we get an exception)
-            fileDelete(arguments.filepath);
+            // Instantiate reusable Java classes
+            var Jsoup = createObject("java", "org.jsoup.Jsoup");
+            var W3CDom = createObject("java", "org.jsoup.helper.W3CDom");
+            var PdfRendererBuilder = createObject("java", "com.openhtmltopdf.pdfboxout.PdfRendererBuilder");
+            var FileOutputStream = createObject("java", "java.io.FileOutputStream");
 
             // Resolve file generation path
             var fileLocation = arguments.filePath.listToArray("\/").slice(1, -1).toList("/");
@@ -39,12 +36,12 @@ component displayname="Write HTML to PDF Example"
             var URI = getPageContext().getRequest().getScheme() & "://" & cgi.server_name;
 
             // Convert HTML5 document string to a W3CDocument object for parsing to PDF
-            var jsoupDoc = variables.Jsoup.parse(arguments.html);
-            var w3cDoc = variables.W3CDom.init().fromJsoup(jsoupDoc);
+            var jsoupDoc = Jsoup.parse(arguments.html);
+            var w3cDoc = W3CDom.init().fromJsoup(jsoupDoc);
 
             // Stream W3CDocument to PDF format
-            var pdfFileOutputStream = variables.FileOutputStream.init(arguments.filePath);
-            var pdfBuilder = variables.PdfRendererBuilder
+            var pdfFileOutputStream = FileOutputStream.init(arguments.filePath, false);
+            var pdfBuilder = PdfRendererBuilder
                 .useFastMode()
                 .withW3cDocument(w3cDoc, URI)
                 .toStream(pdfFileOutputStream)
